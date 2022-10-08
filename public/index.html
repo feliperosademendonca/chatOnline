@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.icon" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.2/socket.io.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Chat Online</title>
+
+</head>
+
+<body>
+        
+    <header>
+        <h1>Chat Online</h1>
+    </header>
+
+    <div id="popUp">
+        <div class="container-popUp">
+            <p>Você precisa informar um apelidod primeiro</p>
+            <input type="text" name="username" required* id='NickName' placeholder="Digite seu Usuário" maxlength="15" >
+            <button type="submit" onclick="fechaPopUp()">CONFIRMAR</button>
+        </div>
+    </div>
+
+    <form id='chat'>
+        <div class="message">
+            <div class="recebida"></div>
+            <div class="enviada"></div>
+        </div>
+        
+        <input type="text" name="message" id='cxMensagem' placeholder="Digite sua Mensagem">
+        <button type="submit"><span class="material-symbols-outlined">send</span></button>
+    </form>
+
+    <script>
+
+        function fechaPopUp() {  
+ 
+            var display = document.getElementById('popUp').style.display;
+            if(display == "none")
+                document.getElementById('popUp').style.display = 'block';
+            else
+                document.getElementById('popUp').style.display = 'none';
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        var socket = io ('http://localhost:3000');
+
+        function renderMessage(message){
+            console.log('chamou a função renderMessage()')
+            $('.message').append('<div class="message"><strong>'+message.author+'</strong>:'+message.message+'</div>');
+        }
+
+        //socket.on('previousMessage', function(messages){
+            //for (message of messages){
+            //    renderMessage(message);
+           // }
+        //});
+
+        socket.on('receivedMessage', function(message){
+            renderMessage(message);
+        })
+        $('#chat').submit(function(event){
+            event.preventDefault();
+
+            var author=$('input[name=username]').val();
+            var message=$('input[name=message]').val();
+
+            if(author.length && message.length){
+                var messageObject={
+                    author:author,
+                    message:message,
+                };
+
+                renderMessage(messageObject);
+
+                socket.emit('sendMessage', messageObject);
+            }
+        });
+      
+    </script>
+</body>
+
+<footer>
+    Criado por @FelipeRosadeMendonca
+</footer>
+</html>
