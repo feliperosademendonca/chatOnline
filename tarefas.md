@@ -5,7 +5,7 @@ Função desabilitar sons
 
 alertar que precisa ter um nickname para conversar no chat
 
-subir para endereço para testar em um host ocm node tipo heroku
+ok! subir para o heroku para testar em uma hospedagem free 
 
 ok! sons do whatsapp ou parecidos
 
