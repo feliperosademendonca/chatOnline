@@ -8,6 +8,7 @@ var socket = io ('http://localhost:5000');
  		if(message.id== "usuario"){
 		$('<div class="enviada"><strong>'+message.author+'</strong>:'+message.message +"<br>").appendTo('#chat');
 		var audio = new Audio('./fx/tik.mp3');
+
 		audio.play();
  
 		}else{
@@ -59,3 +60,28 @@ $('#chat').submit(function(event){
 });
 
  
+
+function volume(value){
+
+	var bool = $("audio").prop("muted");
+
+	if (value=== "off"){
+		alert(value)
+		$("audio").prop("muted",bool);
+
+ 		$('.tik').muted = true;
+		$('.won').muted = true;
+		$('#chat').append('<span class="material-symbols-outlined volume-icon" onclick="volume(off)">volume_off</span>');
+		
+ 
+	}else{
+		alert("vlumue on")
+		$("audio").prop("muted",!bool);
+
+ 
+		$('.tik').muted = false;
+		$('.won').muted = false;
+		$('#chat').append('<span class="material-symbols-outlined volume-icon" onclick="volume(off)">volume_up</span>');
+
+	}
+}

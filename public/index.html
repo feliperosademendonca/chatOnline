@@ -12,8 +12,8 @@
 
 
      <script type="text/javascript" src="scripts/popUp.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <title>Chats App</title>
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+     <title>Chats App</title>
 
 </head>
 <body>
@@ -32,7 +32,10 @@
         </div>
     </div>
 
-    <form id='chat'>     
+    <form id='chat'>
+
+        <p class="material-symbols-outlined volume-icon" onclick="volume('off')">volume_up</p>
+
         <div class="message"><p> <strong>ChatsApp:</strong> Bem vindo ao Chats App</p></div>
         <input type="text" name="message" id="comporMensagem" placeholder="Digite sua Mensagem">        
         <button type="submit" id="btnSubmit" class="btnSend" value="click"><span class="material-symbols-outlined">send</span></button>

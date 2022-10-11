@@ -3,9 +3,13 @@ ajustar a barra de rolagem lateral
 
 Função desabilitar sons
 
-alertar que precisa ter um nickname para conversar no chat
+ok alertar que precisa ter um nickname para conversar no chat
 
+<<<<<<< Updated upstream
 ok! subir para o heroku para testar em uma hospedagem free 
+=======
+ok subir para o heroku para testar em uma hospedagem free (chat não funciona)
+>>>>>>> Stashed changes
 
 ok! sons do whatsapp ou parecidos
 
