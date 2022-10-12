@@ -30,8 +30,6 @@ io.on('connection', socket => {
  
 });
 
-process.env.PORT || server.listen(5000)
-
-
+server.listen(process.env.PORT || 5000 );
 
  
