@@ -20,8 +20,7 @@ let messages= [];
 io.on('connection', socket => {
      console.log(`Socket conectado: ${socket.id}`);
  
-
-    socket.emit('previousMessage', messages);
+     socket.emit('previousMessage', messages);
  
     socket.on('sendMessage', data =>{
         data.id= "historico"
@@ -30,12 +29,8 @@ io.on('connection', socket => {
     }); 
  
 });
-
-const PORT = process.env.PORT|| 5000;
-
-app.listen(PORT, () =>{
-    console.log("listening on port "+PORT);
-})
-
+console.log(messages)
+ 
+server.listen(5000)
 
  
