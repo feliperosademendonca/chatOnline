@@ -6,16 +6,14 @@ var socket = io ('http://localhost:5000');
  function renderMessage(message){
 
 	if(message.id== "usuario"){
-		alert(message.id)
-
+ 
 		$('<div class="enviada"><strong>'+message.author+'</strong>:'+message.message +"<br>").appendTo('#chat');
 		var audio = new Audio('./fx/tik.mp3');
 
 		audio.play();
  
 		}else{
-			alert("recebida")
-
+ 
 		$('<div class="recebida"><strong>'+message.author+'</strong>:'+message.message +"<br>").appendTo('#chat');
 		var audio = new Audio('./fx/won.mp3');
 		audio.play();

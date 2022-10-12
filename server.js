@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require ('path');
+const { Server } = require('tls');
  
 const app = express();
 const server = require('http').createServer(app);//http protocolo
@@ -32,7 +33,7 @@ io.on('connection', socket => {
 
 const PORT = process.env.PORT|| 5000;
 
-app.listen(PORT, () =>{
+server.listen(PORT, () =>{
     console.log("listening on port "+PORT);
 })
 
