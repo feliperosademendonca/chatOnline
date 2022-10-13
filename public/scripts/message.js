@@ -8,7 +8,7 @@ var socket = io ('http://localhost:5000');
 	if(message.id== "usuario"){
  
 		$('<div class="enviada"><strong>'+message.author+'</strong>:'+message.message +"<br>").appendTo('#chat');
-		var audio = new Audio('./fx/tik.mp3');
+		var audio = new Audio('./fx/tik.wav');
 
 		audio.play();
  
