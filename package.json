@@ -1,11 +1,13 @@
 {
   "name": "chatOnline",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
+  },
+  "engines": {
+    "node": "12.13.x"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +20,19 @@
     "socket.io": "^4.5.2",
     "utf-8-validate": "^5.0.9",
     "ws": "^8.9.0"
-  }
+  },
+
+  "devDependencies": {},
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/feliperosademendonca/chatOnline.git"
+  },
+  
+  "bugs": {
+    "url": "https://github.com/feliperosademendonca/chatOnline/issues"
+  },
+
+  "homepage": "https://github.com/feliperosademendonca/chatOnline#readme",
+  "description": ""
 }

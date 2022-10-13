@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require ('path');
+const { Server } = require('socket.io');
  
 const app = express();
 const server = require('http').createServer(app);//http protocolo
@@ -18,10 +19,7 @@ app.use('/',(req,res)=>{
 let messages= []; 
 
 io.on('connection', socket => {
-     console.log(`Socket conectado: ${socket.id}`);
- 
-     socket.emit('previousMessage', messages);
- 
+    socket.emit('previousMessage', messages);
     socket.on('sendMessage', data =>{
         data.id= "historico"
         messages.push(data);
@@ -29,8 +27,11 @@ io.on('connection', socket => {
     }); 
  
 });
+ 
+const PORT = process.env.PORT || 3000;
 
-server.listen(process.env.PORT)
-
+server.listen(PORT, () => {
+    console.log(`Conectado a porta ${ PORT }`);
+});
 
  

@@ -1,10 +1,10 @@
+subir para o heroku para testar em uma hospedagem free (chat não funciona)
+
 ajustar a barra de rolagem lateral
 
 Função desabilitar sons
 
 ok alertar que precisa ter um nickname para conversar no chat
-
-subir para o heroku para testar em uma hospedagem free (chat não funciona)
  
 ok! sons do whatsapp ou parecidos
 
@@ -12,7 +12,7 @@ ok! Configurar node e as rotas
 
 ok! configurar socket.io para receber e enviar mensagens
 
-ok! ?configurar ejs?
+ok! ?configurar ejs
 
 OK! resolver mesagens repetindo
 
