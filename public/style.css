@@ -15,8 +15,7 @@ root{
     padding: 0px;
     margin: 0px;
     font-family: "Roboto", sans-serif;
-    color: #212121;
- }
+  }
  
 html{
     height:100vh;
@@ -47,12 +46,11 @@ header h1{
 }
 
 form{
-     margin: 10px auto;
     border: 1px  solid rgba(0, 0, 0, 0);
     width:90%;
     height: 90%;
-    border-radius: 5px;
  }
+
 
 #popUp{
     width: 100vw;
@@ -115,25 +113,25 @@ form{
 #popUp button:hover{
     background-color: #128C7E;
     color:#ece5dd;
-
     font-weight: bolder;
     transition: 100ms;
 
 }
 
 
-#volume::after{
-    content: 'settings';
-    position: absolute;
+#config{
     right: 60px;
     top: 1px;
     border-radius: 50%;
     padding: 5px;
 }
-
-#volume::before{
-    content: 'menu';
+#menusection{
     position: absolute;
+    right: 0%;
+    top: 0%;
+
+}
+#menu{
     right: 30px;
     top: 1px;
     border-radius: 50%;
@@ -142,7 +140,6 @@ form{
 
 
 #volume{
-    position: absolute;
     right: 35px;
     top: 1px;
     border-radius: 50%;
@@ -150,21 +147,62 @@ form{
     align-items: baseline;
 }
 
-#volume:hover{
+#volume:hover, #menu:hover,#config:hover{
     transition: 300ms;
     background-color: #128C7E;
     border-radius: 50%;
     padding: 5px;
  }
 
+ .conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    height: 80%;
+    background-color: #21212100;
+  }
+  
+.boxColuna{
+    flex: auto;
+    flex-grow: 1;
+    background-color: #25d36500;
+    margin: 0px 5px;
+    
+
+   }
+
+.ads{
+    max-width: 200px;
+    width: 150px;
+    min-width: 100px;
+    background-color: rgba(0, 0, 255, 0.404);
+    margin: 5px 5px 5px 0px ;
+    padding: 5px;
+    flex-shrink: 0;
+    text-align: center;
+    display: table;
+
+ 
+}
+
+.ads p {
+    color: #fff;
+    font-weight: bolder;
+    display: table-cell;
+    vertical-align: middle;
+
+
+
+ 
+}
 
 #chat{
-    height: 75%;
+    height: 100%;
     width: 90%;
     overflow-x:auto;
-    padding: 0 5px;
-    margin-bottom: 15px;   
-} 
+ } 
 
 #chat::-webkit-scrollbar {
     transition:1000ms;
@@ -178,7 +216,6 @@ form{
   }
   
 #chat::-webkit-scrollbar-thumb {
-
     background: #21212100;
   }
 
@@ -186,39 +223,51 @@ form{
     background:#21212188;
   }
   
+  #chatsBot{
+    background-color: #128C7E;
+    margin: 5px 8px 8px 8px ;
+    width: 80%;
+    height: auto;
+    border-radius: 5px 0px 5px 5px;
+    word-wrap: break-word;
+    color: #212121;
+    clear: both;
+    line-height: 18px;
+    font-size: 1em;
+    padding: 8px;
+    box-shadow:  0px 1px 2px rgba(0, 0, 0, 0.212);
 
+  }
+  #chatsBot > p {
+    color: #ece5dd;
+    text-align: center;
+  }
 .message{ 
-    margin: 8px  0;
     width: 90%;
+    margin: 8px;
     height: auto;
     border-radius: 0px 5px 5px 5px;
     word-wrap: break-word;
-    background-color: #128C7E;
-
-    color: #fff;
     clear: both;
     line-height: 18px;
     font-size: 15px;
     padding: 8px;
-     
-    box-shadow:  0px 1px 2px rgba(0, 0, 0, 0.212);
+      
 } 
 
 .enviada{
     background-color: #dcf8c6;
-    margin: 8px  0;
+    margin: 8px;
     width: 80%;
     height: auto;
     border-radius: 5px 0px 5px 5px;
     word-wrap: break-word;
     float: right;
-
     color: #212121;
     clear: both;
     line-height: 18px;
-    font-size: 15px;
+    font-size: 1em;
     padding: 8px;
-     
     box-shadow:  0px 1px 2px rgba(0, 0, 0, 0.212);
 }
 
@@ -233,9 +282,8 @@ form{
     color: #212121;
     clear: both;
     line-height: 18px;
-    font-size: 15px;
+    font-size: 1em;
     padding: 8px;
-     
     box-shadow:  0px 1px 2px rgba(0, 0, 0, 0.212);
 }
  

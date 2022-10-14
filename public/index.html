@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="shortcut icon" href="img/favicon.icon" type="image/x-icon">
 
     <link rel="stylesheet" href="style.css">
@@ -15,12 +15,23 @@
 
     <script type="text/javascript" src="scripts/popUp.js"></script>
 
-    <title>Chats App</title>
+    <title>ChatsApp</title>
 
 </head>
 <body>
+
     <header>
         <h1>ChatsApp</h1>
+
+        <div id="menusection">
+            <p class="material-symbols-outlined menu-icon" id="groups" onclick="salas()">groups</p>
+            <p class="material-symbols-outlined menu-icon" id="person" onclick="conta()">person</p>
+            <p class="material-symbols-outlined volume-icon" id="volume" onclick="volume('off')">volume_up</p>
+            <p class="material-symbols-outlined settings-icon" id="config" config="config()">settings</p>
+            <p class="material-symbols-outlined menu-icon" id="help" onclick="help()">help</p>
+            <p class="material-symbols-outlined menu-icon" id="menu" onclick="menu()">menu</p>
+
+        </div>
     </header>
  
     <div id="popUp">
@@ -31,18 +42,16 @@
         </div>
     </div>
 
-    <form id='chat'>
- 
+    <div class="conteiner">
+        <form id='chat' class="boxColuna">
+            <div class=" " id="chatsBot"><p> <strong>ChatsApp:</strong> Bem vindo ao Chats App Beta1.0</p></div>
+            <input type="text" name="message" id="comporMensagem" placeholder="Digite sua Mensagem">        
+            <button type="submit" id="btnSubmit" class="btnSend" value="click"><span class="material-symbols-outlined">send</span></button>
+        </form>
 
-        <p class="material-symbols-outlined volume-icon" id="volume" onclick="volume('off')">volume_up</p>
-
-        <div class="message"><p> <strong>ChatsApp:</strong> Bem vindo ao Chats App</p></div>
-
-        <input type="text" name="message" id="comporMensagem" placeholder="Digite sua Mensagem">        
-        <button type="submit" id="btnSubmit" class="btnSend" value="click"><span class="material-symbols-outlined">send</span></button>
-    </form>
- 
-
+        <div class="boxColuna ads"> <p>Seu adsense<br>aqui!:D </p></div>
+    </div>
+    
 <script type="text/javascript" src="scripts/message.js"></script>
 
 </body>
