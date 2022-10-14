@@ -64,16 +64,16 @@ $('#chat').submit(function(event){
 });
 
 function volume(){
-	p=$('.volume-icon').text()
+	p=$('#volume').text()
 
  
 	if (p=== "volume_up"){
-		$('.volume-icon').text('volume_off')
+		$('#volume').text('volume_off')
 		audioRecebida.muted = true;
 		audioEnviada.muted = true;
  
 	}else{ 
-		$('.volume-icon').text('volume_up')
+		$('#volume').text('volume_up')
 		audioRecebida.muted = false;
 		audioEnviada.muted = false;
 	}

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@100&family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@100&family=Silkscreen&display=swap');
 
 root{
 --verde1: #075E54; 
@@ -119,25 +120,24 @@ form{
 }
 
 
-#config{
+#config,#groups,#help,#acocunt{
     right: 60px;
     top: 1px;
     border-radius: 50%;
     padding: 5px;
 }
-#menusection{
+#menuSection{
     position: absolute;
     right: 0%;
     top: 0%;
-
 }
+
 #menu{
     right: 30px;
     top: 1px;
     border-radius: 50%;
     padding: 5px;
 }
-
 
 #volume{
     right: 35px;
@@ -147,7 +147,7 @@ form{
     align-items: baseline;
 }
 
-#volume:hover, #menu:hover,#config:hover{
+#volume:hover, #menu:hover,#config:hover,#groups:hover,#person:hover, #help:hover , #acocunt:hover{
     transition: 300ms;
     background-color: #128C7E;
     border-radius: 50%;
@@ -192,13 +192,69 @@ form{
     font-weight: bolder;
     display: table-cell;
     vertical-align: middle;
+}
 
+#salasMenu{
+    display:none;
+    display:table-column-group;
+    flex-direction: row;
+    height: 80%;
+    width: 250px;
+    margin-top: 5px;
+    background-color:#ece5dd;
+    border-radius: 0px 3px 3px 0px;
+    position:absolute;
+    left: 0px;
+    box-shadow:  1px 1px 2px rgba(0, 0, 0, 0.247);
+    box-shadow: inset  5px 0px 5px rgba(0, 0, 0, 0.13);
+    transition: 500ms;
 
+}
+
+#chatIcon{
+    flex-direction: row;
+    border-radius: 50%;
+    margin :5px;
+    top: 5px;
+    padding: 8px;
+    background-color: #128C7E;
+    }
+
+.sala{
+    display:inline-block;
+    flex-direction: row;
+    width: 248px;
+    height: 50px;
+    margin: 1px 0px;
+    border: 1px solid #91919110;
+    background-color: #fff;
+    box-shadow:  0px 1px 2px rgba(0, 0, 0, 0.151);
+}
+
+.H2salas{
+    margin-top: 3px;
+    margin-right: 5px;
+    text-align: right;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: .8em;
+
+}
 
  
+#pChamadaParaSala{
+    flex-direction: row;
+     color: #212121;
+     font-size: .7em;
+ }
+
+.sala:hover{
+    transition: 500ms;
+    background-color: #21212123;
 }
 
 #chat{
+    flex: 1 0;
     height: 100%;
     width: 90%;
     overflow-x:auto;
@@ -350,3 +406,6 @@ footer{
     'opsz' 48;
     color:#fff
   }
+
+
+ 
