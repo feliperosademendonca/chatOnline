@@ -1,30 +1,28 @@
  
 var socket = io ('http://localhost:3000');
 
- 
+var audioEnviada = new Audio('./fx/tik.wav');
+var audioRecebida = new Audio('./fx/won.mp3');
+
 
  function renderMessage(message){
  	if(message.id=== "usuario"){
  
 		$('<div class="enviada"><strong>'+message.author+'</strong>:'+message.message +"<br>").appendTo('#chat');
-		var audio = new Audio('./fx/tik.wav');
 
-		audio.play();
+		audioEnviada.play();
  
 		}else{
  
 		$('<div class="recebida"><strong>'+message.author+'</strong>:'+message.message +"<br>").appendTo('#chat');
-		var audio = new Audio('./fx/won.mp3');
-		audio.play();
+		audioRecebida.play();
 		}
 
 		var chatTela = $('#chat')[0];
 		chatTela.scrollTop = chatTela.scrollHeight;
  }
 
- 
 
- 
 //historico temporario da conversa
    socket.on('previousMessage', function(messages){
 		 for (message of messages)    
@@ -45,6 +43,10 @@ $('#chat').submit(function(event){
 	var message=$('input[name=message]').val();
 	var origem= 'usuario'
  
+	if (author=="") {
+ 		fechaPopUp()
+	} 
+	
 	if(author.length && message.length && origem.length){
 		var messageObject={
 			author:author,
@@ -61,29 +63,20 @@ $('#chat').submit(function(event){
 
 });
 
- 
-/*
-function volume(value){
-
-	var bool = $("audio").prop("muted");
-
-	if (value=== "off"){
-		alert(value)
-		$("audio").prop("muted",bool);
-
- 		$('.tik').muted = true;
-		$('.won').muted = true;
-		$('#chat').append('<span class="material-symbols-outlined volume-icon" onclick="volume(off)">volume_off</span>');
-		
- 
-	}else{
-		alert("vlumue on")
-		$("audio").prop("muted",!bool);
+function volume(){
+	p=$('.volume-icon').text()
 
  
-		$('.tik').muted = false;
-		$('.won').muted = false;
-		$('#chat').append('<span class="material-symbols-outlined volume-icon" onclick="volume(off)">volume_up</span>');
-
+	if (p=== "volume_up"){
+		$('.volume-icon').text('volume_off')
+		audioRecebida.muted = true;
+		audioEnviada.muted = true;
+ 
+	}else{ 
+		$('.volume-icon').text('volume_up')
+		audioRecebida.muted = false;
+		audioEnviada.muted = false;
 	}
-}*/
+	
+}
+

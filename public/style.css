@@ -122,6 +122,42 @@ form{
 }
 
 
+#volume::after{
+    content: 'settings';
+    position: absolute;
+    right: 60px;
+    top: 1px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#volume::before{
+    content: 'menu';
+    position: absolute;
+    right: 30px;
+    top: 1px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+#volume{
+    position: absolute;
+    right: 35px;
+    top: 1px;
+    border-radius: 50%;
+    padding: 5px;
+    align-items: baseline;
+}
+
+#volume:hover{
+    transition: 300ms;
+    background-color: #128C7E;
+    border-radius: 50%;
+    padding: 5px;
+ }
+
+
 #chat{
     height: 75%;
     width: 90%;
