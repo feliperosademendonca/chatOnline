@@ -24,8 +24,6 @@ function menu(){
             
     }
 
-
-
 function fechaPopUp() {  
 
         var display = document.getElementById('popUp').style.display;
@@ -38,20 +36,17 @@ function fechaPopUp() {
         }
 }
 
-
-
 function perfil() {  
 
-        var display = document.getElementById('perfil').style.display;
+        var display = document.getElementById('perfilPupUp').style.display;
         
         if(display == "none"){
-                document.getElementById('perfil').style.display = 'block';
+                document.getElementById('perfilPupUp').style.display = 'block';
 
         }else{
-                document.getElementById('perfil').style.display = 'none';
+                document.getElementById('perfilPupUp').style.display = 'none';
         }
 }
-
 
 function config(){  
       

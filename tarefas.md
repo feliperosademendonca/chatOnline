@@ -1,8 +1,16 @@
-subir para o heroku para testar em uma hospedagem free (chat não funciona)
+**!Ainda não funciona!** subir para o heroku para testar em uma hospedagem free (chat não funciona)
 
 ajustar a barra de rolagem lateral
 
-Função desabilitar sons
+ok add tela de cadastro
+
+ok add um banner para adsense
+
+ok add menu salas de chat
+
+ok add menu
+
+ok Função desabilitar sons
 
 ok alertar que precisa ter um nickname para conversar no chat
  

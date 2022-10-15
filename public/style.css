@@ -196,7 +196,6 @@ form{
 
 #salasMenu{
     display:none;
-    display:table-column-group;
     flex-direction: row;
     height: 80%;
     width: 250px;
@@ -221,6 +220,7 @@ form{
     }
 
 .sala{
+
     display:inline-block;
     flex-direction: row;
     width: 248px;
