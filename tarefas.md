@@ -1,8 +1,29 @@
+===========================================
+                pendente
+===========================================
+
 **!Ainda não funciona!** subir para o heroku para testar em uma hospedagem free (chat não funciona)
+
+add opções de anexar arquivos
+
+add envio de fotos
+
+add envio de audio
+
+add emojis
+
+add tela de cadastro
+
+add tela de login
+
+add função de seleção de salas
 
 ajustar a barra de rolagem lateral
 
-ok add tela de cadastro
+===========================================
+             concluídas
+===========================================
+ ok add tela de cadastro
 
 ok add um banner para adsense
 
