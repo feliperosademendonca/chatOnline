@@ -1,13 +1,14 @@
 
 
 function salas(){
- 
-    if ( $('#salasMenu').css("display") === "none"){
+    if ( $('#salasMenu').css("margin-left") =="-248px"){
         $('#salasMenu').css("display","block");
-        
+        $('#salasMenu').css("margin-left","0px")
+       
+
 	}else{ 
-        $('#salasMenu').css("display","none");
- 
+         $('#salasMenu').css("margin-left","-248px")
+
 	}
 	
 }

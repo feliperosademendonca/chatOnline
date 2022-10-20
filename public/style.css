@@ -195,10 +195,11 @@ form{
 }
 
 #salasMenu{
-    display:none;
+    
     flex-direction: row;
     height: 80%;
     width: 250px;
+    margin-left: -248px;
     margin-top: 5px;
     background-color:#ece5dd;
     border-radius: 0px 3px 3px 0px;
