@@ -1,8 +1,8 @@
  
 //var socket = io ('http://localhost:3000');
 
-var HOST =  'ws://chatsapp-github.herokuapp.com:3000';
-var ws = new WebSocket(HOST);
+var socket = io ('ws://chatsapp-github.herokuapp.com:3000');
+
 
 var audioEnviada = new Audio('./fx/tik.wav');
 var audioRecebida = new Audio('./fx/won.mp3');
