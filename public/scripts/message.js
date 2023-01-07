@@ -1,5 +1,5 @@
  
-//var socket = io ('http://localhost:3000');
+var socket = io ('http://localhost:3000');
 
 var socket = io ('https://chat-online-vercel.vercel.app:3000');
 
