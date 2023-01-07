@@ -1,7 +1,7 @@
  
 //var socket = io ('http://localhost:3000');
 
-var socket = io ('https://chat-online-vercel-feliperosademendonca.vercel.app:3000');
+var socket = io ('https://chat-online-vercel-r5b07tt95-feliperosademendonca.vercel.app:3000');
 
 
 var audioEnviada = new Audio('./fx/tik.wav');
