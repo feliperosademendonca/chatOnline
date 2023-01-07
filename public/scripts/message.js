@@ -3,6 +3,8 @@
 
 var socket = io ('https://chat-online-vercel-git-master-feliperosademendonca.vercel.app:3000');
 
+var HOST = 'chat-online-vercel.vercel.app:3000'
+var ws = new WebSocket(HOST);
 
 var audioEnviada = new Audio('./fx/tik.wav');
 var audioRecebida = new Audio('./fx/won.mp3');
