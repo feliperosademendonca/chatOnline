@@ -1,7 +1,7 @@
  
-//var socket = io ('http://localhost:3000');
+var socket = io ('http://127.0.0.1:3000/');
 
-var socket = io ('vercel.app:3000');
+//var socket = io ('vercel.app:3000');
 
 var audioEnviada = new Audio('./fx/tik.wav');
 var audioRecebida = new Audio('./fx/won.mp3');

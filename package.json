@@ -1,5 +1,5 @@
 {
-  "name": "chatOnline",
+  "name": "chatonline",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "node": "12.13.x"
   },
   "keywords": [],
-  "author": "",
+  "author": "FelipeRosa",
   "license": "ISC",
   "dependencies": {
     "bufferutil": "^4.0.7",
@@ -30,5 +30,5 @@
     "url": "https://github.com/feliperosademendonca/chatOnline/issues"
   },
   "homepage": "https://github.com/feliperosademendonca/chatOnline#readme",
-  "description": ""
+  "description": "chatOnline"
 }
